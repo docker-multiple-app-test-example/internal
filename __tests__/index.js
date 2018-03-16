@@ -1,6 +1,6 @@
 const request = require('request-promise');
 
-const internal = `internal:8888`;
+const internal = `http://internal:8888`;
 
 describe('should work', () => {
   test('should response with valid json', () =>
