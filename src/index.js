@@ -3,7 +3,7 @@ const Redis = require('ioredis');
 
 const redis = new Redis('6379', 'redis');
 
-redis.connect().then(() => {
+redis.on('connect', () => {
   express().use((_, res) => {
     redis.incr('visits').then(
       visits => res.end({ visits }),
