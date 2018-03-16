@@ -1,0 +1,28 @@
+{
+  "name": "internal",
+  "version": "1.0.0",
+  "description": "internal app",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:integration": "docker-compose -f ../compose/docker-compose.yml -f ./docker-compose.yml up -d && docker wait test && exit $?"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/docker-multiple-app-test-example/internal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/docker-multiple-app-test-example/internal/issues"
+  },
+  "homepage": "https://github.com/docker-multiple-app-test-example/internal#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "ioredis": "^3.2.2"
+  },
+  "devDependencies": {
+    "jest": "^22.4.2"
+  }
+}
