@@ -1,9 +1,14 @@
 version: '3'
 
 services:
+  internal:
+    build:
+      context: ../internal
+    depends_on:
+      - redis
   test_internal:
     build:
-      context: .
+      context: ../internal
       dockerfile: Dockerfile-test
     depends_on:
       - internal
