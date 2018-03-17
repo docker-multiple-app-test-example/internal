@@ -10,11 +10,9 @@ docker-compose \
 
 echo "Waiting for tests end..."
 result=$(docker wait ci_test_internal_1)
-
 echo $(docker logs ci_test_internal_1)
+
 if [ $result != "0" ]
 then
   exit 1
 fi
-
-echo "Tests passed"
