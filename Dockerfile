@@ -1,7 +1,5 @@
 FROM node:8.9.4-alpine
 
-EXPOSE 8000
-
 RUN mkdir -p /projects/internal
 WORKDIR /projects/internal
 
