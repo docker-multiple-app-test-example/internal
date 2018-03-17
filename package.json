@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:integration": "docker-compose -f ../compose/docker-compose.yml -f ./docker-compose.yml up -d && docker wait test && exit $?"
+    "test:integration": "docker-compose -p ci -f ./docker-compose.yml -f ../compose/docker-compose.yml up -d && ./exit.sh $(docker wait ci_test_1)"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,8 @@
     "ioredis": "^3.2.2"
   },
   "devDependencies": {
-    "jest": "^22.4.2"
+    "jest": "^22.4.2",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2"
   }
 }
