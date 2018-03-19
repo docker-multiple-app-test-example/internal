@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:integration": "EXTERNAL_BRANCH=master ./tests.sh"
+    "test:integration": "APP_PORT=8888 EXTERNAL_BRANCH=master ./tests.sh"
   },
   "repository": {
     "type": "git",
